@@ -1,7 +1,7 @@
 #include<iostream>
 void swap(int arr[],int size);
 int size;
-using namespace std;
+using namespace std; 
 
 int main(){
     int arr[]={20,22,41,12,65};
