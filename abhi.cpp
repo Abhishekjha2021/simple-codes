@@ -1,7 +1,7 @@
 #include<iostream>
 using namespace std;
 int main(){
-int n,i,remainder;
+    int n,i,remainder;
     int count=0;
     cout<<"Enter a number";
     cin>>n;
