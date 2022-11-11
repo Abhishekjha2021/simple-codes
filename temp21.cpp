@@ -1,48 +1,34 @@
 
 #include<iostream>
 #include<math.h>
+#include<climits>
 using namespace std;
-int count=0 ;
-int po;
 int main(){
-    int n;
-    //int count =0;
-    int sum=0;
-    cout<<"Enter a number"<<endl;
-    cin>>n;
-    while(n>0){
-        
-        int term=n%10;
-
-        if(term>=0){
-            count ++;
-        }
-         po=count;
-        n=n/10;
-
+    int arr[5];
+    int minno=INT_MAX;
+    int maxno=INT_MIN;
+    cout<<"Enter the elements of array"<<endl;
+    for(int i=0;i<5;i++){
+        cin>>arr[i];
     }
+    cout<<"The elements of array are"<<endl;
+    for(int j=0;j<5;j++){
+        cout<<arr[j]<<" ";
+    }
+    for(int k=0;k<5;k++){
+        if(maxno<arr[k]){
+            maxno=arr[k];
+        }
+        if(minno>arr[k]){
+            minno=arr[k];
+        }
+    }
+    cout<<"maximum and minimum no's are"<<endl;
+    cout<<maxno<<" "<<minno;
+    
 
-    cout<<po<<endl<<endl;
-    cout<<"Again enter the number"<<endl;
-        cin>>n;
 
-    while(n>0){
-        
-        int rem=n%10;
-        sum=sum+(pow(rem, po));
-
-        n=n/10;
-     }
-     cout<<sum<<endl;
-     
-     if(sum==n){
-         cout<<"It's an Armstrong number";
-     }
-     else{
-         cout<<"It's not an Armstrong number";
-     }
+    return 0;
 
     
- 
-    return 0;
 }
