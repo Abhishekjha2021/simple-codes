@@ -1,34 +1,32 @@
-
-#include<iostream>
-#include<math.h>
-#include<climits>
+// Online C++ compiler to run C++ program online
+#include <iostream>
+int binarysearch(int arr[],int n,int key);
 using namespace std;
-int main(){
-    int arr[5];
-    int minno=INT_MAX;
-    int maxno=INT_MIN;
-    cout<<"Enter the elements of array"<<endl;
-    for(int i=0;i<5;i++){
-        cin>>arr[i];
-    }
-    cout<<"The elements of array are"<<endl;
-    for(int j=0;j<5;j++){
-        cout<<arr[j]<<" ";
-    }
-    for(int k=0;k<5;k++){
-        if(maxno<arr[k]){
-            maxno=arr[k];
-        }
-        if(minno>arr[k]){
-            minno=arr[k];
-        }
-    }
-    cout<<"maximum and minimum no's are"<<endl;
-    cout<<maxno<<" "<<minno;
-    
 
-
+int main() {
+    int key;
+    int arr[9]={4,9,25,32,41,45,46,50,55};
+    int n=9;
+    cout<<"Enter a key to search in array"<<endl;
+    cin>>key;
+    cout<<binarysearch(arr,n, key);
     return 0;
-
+}
+int binarysearch(int arr[],int n,int key){
+    int s=0;
+    int e=n;
     
+    while(s<=e){
+        int mid=(s+e)/2;
+        
+        if(arr[mid]==key){
+            return mid;
+        }
+        else if(arr[mid]<key){
+            s=mid+1;
+        }
+        else{
+            e=mid-1;
+        }
+    }
 }
