@@ -4,7 +4,7 @@ int binarysearch(int arr[],int n,int key);
 using namespace std;
 int main(){
     int key;
-    int arr[9]={1,2,3,4,5,6,7,8,12};
+    int arr[9]={1,2,3,4,5,6,7,8,9};//Mistake done by me---i was not arranging data in ascending order...........
     //int size=sizeof(arr)/sizeof(arr[0]);
     int n=9;
     cout<<"Enter a key to search in array"<<endl;
