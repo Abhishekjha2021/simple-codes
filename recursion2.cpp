@@ -12,6 +12,6 @@ void func(int n){
         return;
     }
     
-    cout<<n;
+    cout<<n<<" ";
     func(n-1);
 }

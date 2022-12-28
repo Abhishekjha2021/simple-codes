@@ -4,7 +4,7 @@ using namespace std;
 int sortedarrsy(int arr[],int n);
 
 int main(){
-    int arr[5]={1,2,3,4,5};
+    int arr[5]={1,2,3,5,4};
     int n=sizeof(arr)/sizeof(arr[0]);
     if (sortedarrsy(arr, n))
         cout << "Yes\n";
